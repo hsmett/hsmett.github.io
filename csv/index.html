@@ -28,8 +28,8 @@ def queryset_to_csv(queryset, fnames, filename):
     </div>
   </body>
   <script type="text/javascript">
-      var converter = new showdown.Converter()
-      var node = document.getElementById('markdown')
-      node.textContent = converter.makeHtml(node.textContent)
+      var converter = new showdown.Converter();
+      var node = document.getElementById('markdown');
+      node.innerHTML = converter.makeHtml(node.innerText);
   </script>
 </html>
