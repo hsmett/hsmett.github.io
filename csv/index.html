@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV</title>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.7/showdown.min.js"></script>
+  </head>
+  <body>
+    <div id="markdown">
+import csv
+
+def get_header(model, fnames):
+    return [model._meta.get_field(fname).verbose_name for fname in fnames]
+
+
+def queryset_to_csv(queryset, fnames, filename):
+    with open(filename, 'w+', newline='\n') as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL, delimiter=";")
+        queryset = queryset.values_list(*fnames, flat=True)
+        header = get_header(queryset.model, fnames)
+        writer.writerow(header)
+        for values in queryset.iterator():
+            writer.writerow(values)
+
+    </div>
+  </body>
+  <script type="text/javascript">
+      var converter = new showdown.Converter()
+      var node = document.getElementById('markdown')
+      node.textContent = converter.makeHtml(node.textContent)
+  </script>
+</html>
