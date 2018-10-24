@@ -1,0 +1,1397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"><head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>aide à la rédaction de la documentation technique des instruments - Creme CRM</title>
+    <script type="text/javascript">
+        var THEME_NAME = "icecream";
+    </script>
+    <!--
+        Firebug for browsers without plugin/extension :
+            - uncomment the following script
+            - add debug="true" to <html> tag
+    -->
+    <!--script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script-->
+    <link rel="stylesheet" type="text/css" href="demo_fichiers/icecreammain-a31c3c2f8a5ca57cf1005ace4e4e8c91c138cf29.css">
+    
+<script type="text/javascript" src="demo_fichiers/l10n--fr-5b98cc331538be711c1f456e9f89a903e631889d.js"></script>
+<script type="text/javascript" src="demo_fichiers/lib-7f35f75e195e451c4b72ac02ea6624056dfeb31e.js"></script>
+<script type="text/javascript" src="demo_fichiers/main-33be6510120d2b50b2b3fe672f289c131a97ce76.js"></script>
+<!--script type="text/javascript" src="http://192.168.1.102:8080/site_media/tiny_mce/jquery.tinymce.js"></script-->
+    <link rel="shortcut icon" href="#/static_media/common/images/favicon-e41be60abc5ebb842ee87b442a71345c5a720ded.ico" type="image/x-icon">
+    <style type="text/css"> 
+      
+        /* TODO: move to CSS when OLD_MENU has been removed */
+        div.main_content {
+            padding-top: 40px;
+        }
+      
+    </style>
+    
+</head>
+<body class="" data-save-relations-url="/creme_core/relation/add_from_predicate/save" data-select-relations-objects-url="/creme_core/relation/objects2link" data-bricks-reload-url="/creme_core/bricks/reload/detailview/127?base_url=%2Fopportunities%2Fopportunity%2F127" data-brick-state-url="/creme_core/bricks/set_state">
+
+    
+<div class="header-menu">
+    
+    <a id="logo" href="#/" alt="Accueil">
+        
+
+        <img src="demo_fichiers/creme_30-f46fc2af3969b80f7624f055a030fe8f35d99a6f.png" class="header-menu-home-icon" title="Accueil" alt="Accueil" width="30px">
+        
+    </a>
+    
+
+    <ul class="ui-creme-navigation"><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_creme">Creme<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_home"><a href="#/">Accueil</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_trash"><a href="#/creme_core/entity/trash">Corbeille <span class="ui-creme-navigation-punctuation">(</span>0 fiche<span class="ui-creme-navigation-punctuation">)</span></a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_user-begin"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_user"><span class="ui-creme-navigation-title">Utilisateur</span></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-user_contact"><a href="#/persons/contact/322">romain F.</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-timezone"><a href="#/creme_config/my_settings/portal">Fuseau horaire : Europe/Paris</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_my_page"><a href="#/my_page">Ma page</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_my_jobs"><a href="#/creme_core/job/mine">Mes jobs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_my_settings"><a href="#/creme_config/my_settings/portal">Ma configuration</a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_user-end"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_logout"><a href="#/creme_logout">Se déconnecter</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_activities-main">Activités<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_activities-calendar"><a href="#/activities/calendar/user">Calendrier</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_activities-activities"><a href="#/activities/activities">Activités</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_activities-phone_calls"><a href="#/activities/phone_calls">Appels téléphoniques</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_activities-meetings"><a href="#/activities/meetings">Rendez-vous</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_persons-directory">Annuaire<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-organisations"><a href="#/persons/organisations">Sociétés</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-contacts"><a href="#/persons/contacts">Contacts</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-lead_customers"><a href="#/persons/leads_customers">Mes clients / prospects / suspects</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-salesmen"><a href="#/commercial/salesmen">Commerciaux</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_vcfs-import"><a href="#/vcfs/vcf">Importer depuis un fichier VCF</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_opportunities-commercial">Commercial<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_opportunities-opportunities"><a href="#/opportunities/opportunities">Opportunités</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_opportunities-quotes"><a href="#/billing/quotes">Devis</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-acts"><a href="#/commercial/acts">Actions commerciales</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-strategies"><a href="#/commercial/strategies">Plans commerciaux</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-segments"><a href="#/commercial/market_segments">Segments de marché</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-patterns"><a href="#/commercial/objective_patterns">Modèles d'objectif</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_management">Gestion<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-quotes"><a href="#/billing/quotes">Devis</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-invoices"><a href="#/billing/invoices">Factures</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_products-products"><a href="#/products/products">Produits</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_products-services"><a href="#/products/services">Services</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-credit_notes"><a href="#/billing/credit_note">Avoirs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-sales_orders"><a href="#/billing/sales_orders">Bons de commande</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_recurrents-generators"><a href="#/recurrents/generators">Générateurs récurrents</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-product_lines"><a href="#/billing/product_lines">Lignes produit</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_billing-service_lines"><a href="#/billing/service_lines">Lignes service</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_tools">Outils<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_core-jobs"><a href="#/creme_core/job/all">Jobs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_documents-documents"><a href="#/documents/documents">Documents</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_documents-folders"><a href="#/documents/folders">Classeurs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_projects-projects"><a href="#/projects/projects">Projets</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_tickets-tickets"><a href="#/tickets/tickets">Tickets</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_events-events"><a href="#/events/events">Évènements</a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_crudity-begin"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_crudity"><span class="ui-creme-navigation-title">Données externes</span></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_crudity-waiting_actions"><a href="#/crudity/waiting_actions">Actions en attente</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_crudity-history"><a href="#/crudity/history">Historique</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_marketing">Marketing<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_emails-campaigns"><a href="#/emails/campaigns">Campagnes d'envois d'e-mails</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_emails-mlists"><a href="#/emails/mailing_lists">Listes de diffusion d'e-mails</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_emails-templates"><a href="#/emails/templates">Patrons d'e-mail</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_emails-emails"><a href="#/emails/mails">E-mails</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_emails-sync"><a href="#/emails/synchronization">Synchronisation des e-mails externes</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_analysis">Analyse<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_reports-reports"><a href="#/reports/reports">Rapports</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_graphs-graphs"><a href="#/graphs/graphs">Graphes</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_creme_config"><svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <g id="creme_config-menu_icon">
+      <path d="M0 0h24v24h-24z" fill="none"></path>
+      <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65c-.03-.24-.24-.42-.49-.42h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-7.43 2.52c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path>
+    </g>
+  </defs>
+</svg><svg viewBox="0 0 24 24"><use xlink:href="#creme_config-menu_icon"></use></svg><ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-portal"><a href="#/creme_config/">Configuration générale</a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_creme_config-portals-begin"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-blocks"><a href="#/creme_config/blocks/portal">Blocs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-custom_fields"><a href="#/creme_config/custom_fields/portal">Champs personnalisés</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-fields"><a href="#/creme_config/fields/portal">Champs</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-history"><a href="#/creme_config/history/portal">Historique</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-button_menu"><a href="#/creme_config/button_menu/portal">Menu bouton</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-search"><a href="#/creme_config/search/portal">Recherche</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-roles"><a href="#/creme_config/role/portal">Rôles et droits</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-property_types"><a href="#/creme_config/property_type/portal">Types de propriété</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-relation_types"><a href="#/creme_config/relation_type/portal">Types de relation</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_creme_config-users"><a href="#/creme_config/user/portal">Utilisateurs</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_creation">+ Création<ul><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_main_entities"><span class="ui-creme-navigation-title">Fiches principales</span></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-create_organisation"><a href="#/persons/organisation/add">Société</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_persons-create_contact"><a href="#/persons/contact/add">Contact</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_opportunities-create_opportunity"><a href="#/opportunities/opportunity/add">Opportunité</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_commercial-create_act"><a href="#/commercial/act/add">Action commerciale</a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_main_entities-end"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_quick_forms"><span class="ui-creme-navigation-title">Création rapide</span></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_quick_forms-71"><a href="#" data-href="/creme_core/quickforms/71/1" class="quickform-menu-link">Contact</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_quick_forms-52"><a href="#" data-href="/creme_core/quickforms/52/1" class="quickform-menu-link">Document</a></li><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_quick_forms-67"><a href="#" data-href="/creme_core/quickforms/67/1" class="quickform-menu-link">Société</a></li><hr class="ui-creme-navigation-separator ui-creme-navigation-separator-id_quick_forms-end"><li class="ui-creme-navigation-item-level1 ui-creme-navigation-item-id_any_forms"><a href="" class="anyform-menu-link" title="Créer une fiche de n'importe quel type" data-grouped-links="[[{&quot;links&quot;: [{&quot;url&quot;: &quot;/activities/activity/add/phonecall&quot;, &quot;label&quot;: &quot;Appel t\u00e9l\u00e9phonique&quot;}, {&quot;url&quot;: &quot;/activities/activity/add/meeting&quot;, &quot;label&quot;: &quot;Rendez-vous&quot;}, {&quot;url&quot;: &quot;/activities/activity/add&quot;, &quot;label&quot;: &quot;Activit\u00e9&quot;}, {&quot;url&quot;: &quot;/activities/activity/add/task&quot;, &quot;label&quot;: &quot;T\u00e2che&quot;}, {&quot;url&quot;: &quot;/activities/activity/add_indispo&quot;, &quot;label&quot;: &quot;Indisponibilit\u00e9&quot;}], &quot;label&quot;: &quot;Activit\u00e9s&quot;}, {&quot;links&quot;: [{&quot;url&quot;: &quot;/persons/contact/add&quot;, &quot;label&quot;: &quot;Contact&quot;}, {&quot;url&quot;: &quot;/persons/organisation/add&quot;, &quot;label&quot;: &quot;Soci\u00e9t\u00e9&quot;}, {&quot;url&quot;: &quot;/commercial/salesman/add&quot;, &quot;label&quot;: &quot;Commercial&quot;}], &quot;label&quot;: &quot;Annuaire&quot;}], [{&quot;links&quot;: [{&quot;url&quot;: &quot;/opportunities/opportunity/add&quot;, &quot;label&quot;: &quot;Opportunit\u00e9&quot;}, {&quot;url&quot;: &quot;/billing/quote/add&quot;, &quot;label&quot;: &quot;Devis&quot;}, {&quot;url&quot;: &quot;/commercial/act/add&quot;, &quot;label&quot;: &quot;Action commerciale&quot;}, {&quot;url&quot;: &quot;/commercial/strategy/add&quot;, &quot;label&quot;: &quot;Plan commercial&quot;}, {&quot;url&quot;: &quot;/commercial/objective_pattern/add&quot;, &quot;label&quot;: &quot;Mod\u00e8le d'objectif&quot;}], &quot;label&quot;: &quot;Commercial&quot;}, {&quot;links&quot;: [{&quot;url&quot;: &quot;/billing/quote/add&quot;, &quot;label&quot;: &quot;Devis&quot;}, {&quot;url&quot;: &quot;/billing/invoice/add&quot;, &quot;label&quot;: &quot;Facture&quot;}, {&quot;url&quot;: &quot;/products/product/add&quot;, &quot;label&quot;: &quot;Produit&quot;}, {&quot;url&quot;: &quot;/products/service/add&quot;, &quot;label&quot;: &quot;Service&quot;}, {&quot;url&quot;: &quot;/billing/credit_note/add&quot;, &quot;label&quot;: &quot;Avoir&quot;}, {&quot;url&quot;: &quot;/billing/sales_order/add&quot;, &quot;label&quot;: &quot;Bon de commande&quot;}, {&quot;url&quot;: &quot;/recurrents/generator/add&quot;, &quot;label&quot;: &quot;G\u00e9n\u00e9rateur r\u00e9current&quot;}], &quot;label&quot;: &quot;Gestion&quot;}], [{&quot;links&quot;: [{&quot;url&quot;: &quot;/documents/document/add&quot;, &quot;label&quot;: &quot;Document&quot;}, {&quot;url&quot;: &quot;/documents/folder/add&quot;, &quot;label&quot;: &quot;Classeur&quot;}, {&quot;url&quot;: &quot;/projects/project/add&quot;, &quot;label&quot;: &quot;Projet&quot;}, {&quot;url&quot;: &quot;/tickets/ticket/add&quot;, &quot;label&quot;: &quot;Ticket&quot;}, {&quot;url&quot;: &quot;/events/event/add&quot;, &quot;label&quot;: &quot;\u00c9v\u00e8nement&quot;}], &quot;label&quot;: &quot;Outils&quot;}, {&quot;links&quot;: [{&quot;url&quot;: &quot;/emails/campaign/add&quot;, &quot;label&quot;: &quot;Campagne d'envois d'e-mails&quot;}, {&quot;url&quot;: &quot;/emails/mailing_list/add&quot;, &quot;label&quot;: &quot;Liste de diffusion d'e-mails&quot;}, {&quot;url&quot;: &quot;/emails/template/add&quot;, &quot;label&quot;: &quot;Patron d'e-mail&quot;}], &quot;label&quot;: &quot;Marketing&quot;}, {&quot;links&quot;: [{&quot;url&quot;: &quot;/reports/report/add&quot;, &quot;label&quot;: &quot;Rapport&quot;}, {&quot;url&quot;: &quot;/graphs/graph/add&quot;, &quot;label&quot;: &quot;Graphe&quot;}], &quot;label&quot;: &quot;Analyse&quot;}]]">Autre type de fiche</a></li></ul></li><li class="ui-creme-navigation-item-level0 ui-creme-navigation-item-id_recent_entities">Fiches récentes<ul><li><a href="#/opportunities/opportunity/127">aide à la rédaction de la documentation technique des instruments</a></li><li><a href="#/activities/activity/328">point commerce</a></li><li><a href="#/persons/organisation/4">Société Demo</a></li></ul></li></ul>
+
+    
+    <div class="accessories-box">
+        
+        <div class="search-box">
+            <input placeholder="Recherche" type="text">
+            <span class="search-box-icon default">
+                <img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="search-icon-loading" title="Chargement…" alt="Chargement…" width="16px">
+                <img src="demo_fichiers/search_16-d40fdf183ff9ac18b9590bb84cef08f2e594792b.png" class="search-icon-default" title="Recherche" alt="Recherche" width="16px">
+            </span>
+
+            <div class="inline-search-results">
+                <div class="search-results-group all-search-results">
+                    <span class="search-results-group-title"></span>
+                    <ul class="search-results">
+                        <li class="search-result"><a href="#/creme_core/search">Recherche avancée</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script>
+    
+        $(function () {
+            creme.menu.bindEvents();
+
+            $('.quickform-menu-link').on('click', function(e) {
+                e.preventDefault();
+                creme.menu.openQuickForm($(this));
+            });
+
+            $('.anyform-menu-link').on('click', function(e) {
+                e.preventDefault();
+                creme.menu.openCreateAnyDialog(e.target);
+            });
+
+            new creme.search.SearchBox('.search-box', '/creme_core/search/light', '/creme_core/search');
+        })
+    
+    </script>
+</div>
+
+
+
+    
+    <div class="ui-dialog-within-container"></div>
+    <div id="content" class="main_content">
+        
+
+        <div id="sub_content">
+            
+
+<div class="detailview">
+    <div class="listviews-breadcrumbs global-buttons">Commercial <span class="listviews-breadcrumbs-separator">/</span>
+        Liste des
+        <a href="#/opportunities/opportunities" class="listview-breadcrumb">8 opportunités</a></div>
+
+
+            
+            
+
+            
+            
+
+            
+    
+    
+    
+    
+    
+    
+
+    
+
+<div class="brick brick-hat brick-hat-card opportunities-card-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="hatbrick-opportunities-opportunity_card" data-brick-deps="[&quot;opportunities.opportunity&quot;, &quot;persons.organisation&quot;, &quot;persons.contact&quot;, &quot;creme_core.relation.persons-subject_employed_by&quot;, &quot;creme_core.relation.activities-subject_participates_to_activity&quot;, &quot;creme_core.relation.activities-subject_activity_subject&quot;, &quot;creme_core.relation.activities-subject_linked_2_activity&quot;, &quot;creme_core.relation.commercial-subject_complete_goal&quot;, &quot;activities.activity&quot;, &quot;commercial.act&quot;]">
+    
+    
+    <div class="brick-content ">
+    
+    
+    <div class="hat-card">
+        <div class="hat-card-main">
+            <div class="business-card-container">
+                <div class="business-card">
+                    <div class="card-icon">
+                        
+                        <div><img src="demo_fichiers/opportunity_22-34ff63c1cdba71c2239dfa45c3f9511893b102aa.png" title="Opportunité" alt="Opportunité" width="22px"></div>
+                        
+                    </div>
+                    <div class="card-content">
+                        
+                        <div class="card-intro">
+                            <span class="card-type">Opportunité</span>
+                            <div class="card-info-field">
+                                
+
+
+    <span class="card-info-key">Dernière action</span>
+    
+    <span class="card-info-value">
+        
+        —
+        
+    </span>
+    
+
+
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card-main">
+                            <div class="card-name">aide à la rédaction de la documentation technique des instruments
+                                
+                            </div>
+                            <div class="business-card-indicators">
+                                
+    
+    <div class="business-card-indicator business-card-warning-indicator" title="Rendez-vous, appel téléphonique…">Pas d'activité depuis 30j</div>
+    
+
+                            </div>
+                        </div>
+                        
+                        
+    <div class="card-targets">
+        
+        <span class="card-function">Cible la société</span> <a href="#/persons/organisation/58">Société16</a>
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hat-card-info">
+                <div class="card-info-fields">
+                    <span class="card-info-title">
+Détails
+</span>
+                    
+    <div class="card-info-field">
+        <span class="card-info-key">Phase de vente</span>
+        <span class="card-info-value">À venir</span>
+    </div>
+    
+    <div class="card-info-field">
+        <span class="card-info-key">CA estimé</span>
+        <span class="card-info-value">
+            
+            1 212 121,00 €
+            
+        </span>
+    </div>
+    
+    
+    <div class="card-info-field">
+        <span class="card-info-key">CA final</span>
+        <span class="card-info-value">
+            
+            —
+            
+        </span>
+    </div>
+    
+
+                </div>
+                <div class="card-info-summary">
+                    <span class="card-info-title">Résumé stratégique</span>
+                    
+    
+
+    <div class="card-info-field">
+        <div class="card-info-field">
+            <span class="card-info-key">
+                
+                    Actions commerciales
+                
+            </span>
+            <span class="card-info-value">
+                —
+            </span>
+        </div>
+    </div>
+
+    
+        <div class="card-info-field">
+            <div class="card-info-field">
+                <span class="card-info-key">
+                    
+                        Contacts liés
+                    
+                </span>
+                <span class="card-info-value">
+                    —
+                </span>
+            </div>
+        </div>
+    
+    
+
+    <div class="card-info-field">
+        <span class="card-info-key">Prochaine action</span>
+        
+        <span class="card-info-value next-action-value">
+            
+            —
+            
+        </span>
+        
+    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="hat-card-sidebar hat-card-sidebar-narrow">
+            <div class="card-actions">
+            
+                
+                
+                    
+
+                    
+                    
+                    <div class="card-action">
+                        
+                        <a class="card-button card-button-icon" href="#/opportunities/opportunity/edit/127">
+                        
+                            <img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" title="Modifier" alt="Modifier" width="16px">Modifier
+                        </a>
+                    </div>
+                    
+                    
+
+                    
+                    
+                    <div class="card-action"><a href="#/creme_core/entity/delete/127" title="Supprimer" class="card-button card-button-icon " data-action="detailview-delete">
+    <script type="application/json">{"data": {}, "options": {"loading": null, "confirm": "Voulez-vous vraiment envoyer cette fiche dans la corbeille ?"}}</script>
+    <img src="demo_fichiers/delete_16-7c555461f915ea580d50cac95bd987caad1deda6.png" title="Supprimer" alt="Supprimer" width="16px">Supprimer
+</a>
+</div>
+                    
+                    
+
+                    
+                    
+                    <div class="card-action"><a href="#/creme_core/entity/clone" title="Cloner" class="card-button card-button-icon " data-action="detailview-clone">
+    <script type="application/json">{"data": {"id": 127}, "options": {"loading": null, "confirm": "Voulez-vous vraiment cloner cette fiche ?"}}</script>
+    <img src="demo_fichiers/clone_16-b99ff49194078de3a22a87dd3d6068776dbb2ad8.png" title="Cloner" alt="Cloner" width="16px">Cloner
+</a>
+</div>
+                    
+                    
+
+                    
+                
+            
+            </div>
+            
+            
+
+<div class="card-history">
+    <div class="history-title-container">
+        <span class="history-title">Informations fiche Crème</span>
+        
+    </div>
+    
+    <div class="history-info">
+        Créée le <span class="history-info-value">23-11-2017</span> à <span class="history-info-value">22:12</span> par <span class="history-info-value"><a href="#/persons/contact/25">Hugo f.</a></span>
+    </div>
+    
+    
+    
+    <div class="history-info">
+        Modifiée le <span class="history-info-value">02-10-2018</span> à <span class="history-info-value">15:13</span> par <span class="history-info-value"><a href="#/persons/contact/322">romain F.</a></span>
+    </div>
+    
+    
+    <div class="history-info">
+        Assignée à <span class="history-info-value"><a href="#/persons/contact/25">Hugo f.</a></span>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+
+    </div>
+    
+</div>
+
+
+
+
+    <div class="buttons-list instance-buttons">
+
+        <ul>
+            
+    
+    <li>
+
+    <a class="menu_button menu-button-icon" href="#/activities/activity/add_related/127">
+        <img src="demo_fichiers/calendar_16-3607f1755c97f53ff3d628afbc2bf4d500cc1adb.png" title="Activité" alt="Activité" width="16px">Créer une activité liée
+    </a>
+
+</li>
+
+    <li>
+
+    <a class="menu_button menu-button-icon" href="#/activities/activity/add_related/127?activity_type=activities-activitytype_meeting">
+        <img src="demo_fichiers/meeting_16-c2f8d14db1bff9816118f706ee3cea696c8dc26d.png" title="Rendez-vous" alt="Rendez-vous" width="16px">Créer un rendez-vous lié
+    </a>
+
+</li>
+
+    <li>
+
+    <a class="menu_button menu-button-icon" href="#/activities/activity/add_related/127?activity_type=activities-activitytype_phonecall">
+        <img src="demo_fichiers/phone_16-eb468ae2606ded0bcb600f611c143bcc1f390e01.png" title="Appel téléphonique" alt="Appel téléphonique" width="16px">Créer un appel téléphonique lié
+    </a>
+
+</li>
+
+    <li>
+
+
+    <a class="menu_button menu-button-icon" onclick="creme.relations.addRelationTo(127, 'commercial-subject_complete_goal', 115);">
+
+        <img src="demo_fichiers/commercial_16-e52b351402695712c24ff8609ac546a3d664376d.png" title="Action Commerciale" alt="Action Commerciale" width="16px">
+        Remplit un but
+    </a>
+
+</li>
+    <li>
+
+
+    <a class="menu_button menu-button-icon" id="config-bloc" onclick="startBlocEditMode();">
+        Configurer les blocs
+    </a>
+
+</li>
+
+
+        </ul>
+    </div>
+
+
+<div class="north"></div><div class="column west"><div class="brick brick-tiles is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="modelblock_opportunities-opportunity" data-brick-deps="[&quot;opportunities.opportunity&quot;, &quot;creme_core.relation.opportunities-object_linked_quote&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/opportunity_16-699113acade6d67b1ec2d49ff50fdd64632ddc14.png" class="brick-header-icon brick-header-menu" title="Opportunité" alt="Opportunité" width="16px"><span class="brick-title" title="Informations sur l'opportunité">
+    Informations sur l'opportunité
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"></div></div><div class="brick-content "><div class="brick-tile" data-key="regular_field-name" data-field-editable=""><span class="brick-tile-name">
+        Nom de l'opportunité
+<a href="#/creme_core/entity/edit/inner/102/127/field/name" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value">aide à la rédaction de la documentation technique des instruments</span></div><div class="brick-tile brick-tile-empty-value" data-key="regular_field-reference" data-field-editable=""><span class="brick-tile-name">
+        Référence
+<a href="#/creme_core/entity/edit/inner/102/127/field/reference" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile" data-type="integer" data-key="regular_field-estimated_sales" data-field-editable=""><span class="brick-tile-name">
+        CA estimé
+<a href="#/creme_core/entity/edit/inner/102/127/field/estimated_sales" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value">1212121</span></div><div class="brick-tile brick-tile-empty-value" data-type="integer" data-key="regular_field-made_sales" data-field-editable=""><span class="brick-tile-name">
+        CA final
+<a href="#/creme_core/entity/edit/inner/102/127/field/made_sales" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile" data-key="regular_field-currency" data-field-editable=""><span class="brick-tile-name">
+        Devise
+<a href="#/creme_core/entity/edit/inner/102/127/field/currency" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value">Euro</span></div><div class="brick-tile" data-key="regular_field-sales_phase" data-field-editable=""><span class="brick-tile-name">
+        Phase de vente
+<a href="#/creme_core/entity/edit/inner/102/127/field/sales_phase" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value">À venir</span></div><div class="brick-tile brick-tile-empty-value" data-type="integer" data-key="regular_field-chance_to_win" data-field-editable=""><span class="brick-tile-name">
+        % de chance d'obtention
+<a href="#/creme_core/entity/edit/inner/102/127/field/chance_to_win" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile brick-tile-empty-value" data-type="date" data-key="regular_field-expected_closing_date" data-field-editable=""><span class="brick-tile-name">
+        Date de signature prévue
+<a href="#/creme_core/entity/edit/inner/102/127/field/expected_closing_date" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile brick-tile-empty-value" data-type="date" data-key="regular_field-closing_date" data-field-editable=""><span class="brick-tile-name">
+        Date de signature réelle
+<a href="#/creme_core/entity/edit/inner/102/127/field/closing_date" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile brick-tile-empty-value" data-key="regular_field-origin" data-field-editable=""><span class="brick-tile-name">
+        Origine
+<a href="#/creme_core/entity/edit/inner/102/127/field/origin" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile brick-tile-empty-value" data-type="date" data-key="regular_field-first_action_date" data-field-editable=""><span class="brick-tile-name">
+        Date de la première action
+<a href="#/creme_core/entity/edit/inner/102/127/field/first_action_date" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile brick-tile-multiline-value brick-tile-empty-value" data-type="text" data-key="regular_field-description" data-field-editable=""><span class="brick-tile-name">
+        Description
+<a href="#/creme_core/entity/edit/inner/102/127/field/description" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><span class="empty-field">—</span></span></div><div class="brick-tile" data-type="datetime" data-key="regular_field-created"><span class="brick-tile-name">
+        Date de création
+    </span><span class="brick-tile-value">23-11-2017 22:12:32</span></div><div class="brick-tile" data-type="datetime" data-key="regular_field-modified"><span class="brick-tile-name">
+        Dernière modification
+    </span><span class="brick-tile-value">02-10-2018 15:13:41</span></div><div class="brick-tile" data-key="regular_field-user" data-field-editable=""><span class="brick-tile-name">
+        Utilisateur propriétaire
+<a href="#/creme_core/entity/edit/inner/102/127/field/user" title="Modifier" class="brick-tile-action action-type-edit  " data-action="edit"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/edit_16-e9f265e2ab77d295e1c704c37d393a2ed860e3c2.png" class="brick-action-icon" title="Modifier" alt="Modifier" width="16px"><span class="brick-tile-action-title brick-action-title">Modifier</span></a></span><span class="brick-tile-value"><a href="#/persons/contact/25">Hugo flori</a></span></div></div></div><div class="brick brick-tiles creme_core-custom-fields-brick is-empty is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_creme_core-customfields" data-brick-deps="[&quot;creme_core.customfield&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/info_16-83b6e96c68b845ad2d22b59d8bafaf3aadb9efad.png" class="brick-header-icon brick-header-menu" title="Informations" alt="Informations" width="16px"><span class="brick-title" title="Champs personnalisés">
+    Champs personnalisés
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"></div></div><div class="brick-content "></div></div><div class="brick brick-table opportunities-contacts-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-linked_contacts" data-brick-deps="[&quot;creme_core.relation.opportunities-object_linked_contact&quot;, &quot;persons.contact&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/contact_16-e64c8b9b409b960b8cbce71880e0a5262f3566ed.png" class="brick-header-icon brick-header-menu" title="Contacts liés à cette opportunité" alt="Contacts liés à cette opportunité" width="16px"><span class="brick-title" title="Contacts liés à cette opportunité">
+    Contacts liés à cette opportunité
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="" title="Lier à des contacts" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 71, "rtype_id": "opportunities-object_linked_contact"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à des contacts" alt="Lier à des contacts" width="16px"><span class="brick-header-button-title brick-action-title">Lier à des contacts</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun contact lié pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table opportunities-products-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-linked_products" data-brick-deps="[&quot;creme_core.relation.opportunities-object_linked_product&quot;, &quot;products.product&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/product_16-1e4ac09244164afe16a392c65180be10182be1d1.png" class="brick-header-icon brick-header-menu" title="Produits associés" alt="Produits associés" width="16px"><span class="brick-title" title="Produits associés">
+    Produits associés
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="" title="Lier à un produit" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 80, "rtype_id": "opportunities-object_linked_product"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à un produit" alt="Lier à un produit" width="16px"><span class="brick-header-button-title brick-action-title">Lier à un produit</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun produit concerné pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table opportunities-services-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-linked_services" data-brick-deps="[&quot;creme_core.relation.opportunities-object_linked_service&quot;, &quot;products.service&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/service_16-db8fc62194851e97bacf27525c374d7e7ef32709.png" class="brick-header-icon brick-header-menu" title="Services concernés" alt="Services concernés" width="16px"><span class="brick-title" title="Services concernés">
+    Services concernés
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="" title="Lier à un service" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 82, "rtype_id": "opportunities-object_linked_service"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à un service" alt="Lier à un service" width="16px"><span class="brick-header-button-title brick-action-title">Lier à un service</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun service concerné pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table opportunities-quotes-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-quotes" data-brick-deps="[&quot;creme_core.relation.opportunities-object_linked_quote&quot;, &quot;billing.quote&quot;]"><script type="text/javascript">
+     creme.opportunities.setCurrentQuote = function(checkbox, url) {
+        var brick = $(checkbox).parents('.brick').creme().widget().brick();
+
+        creme.utils.ajaxQuery(url, {action: 'post', warnOnFail: true})
+                   .onDone(function() {brick.refresh();})
+                   .start();
+     };
+ </script><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/invoice_16-5b076a04d3672526916222afc6f1a3cc96f3bbad.png" class="brick-header-icon brick-header-menu" title="1 Devis proposé" alt="1 Devis proposé" width="16px"><span class="brick-title" title="1 Devis proposé">
+    1 Devis proposé
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/opportunities/opportunity/generate_new_doc/127/89" title="Générer un devis courant" class="brick-header-button action-type-add  " data-action="update"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Générer un devis courant" alt="Générer un devis courant" width="16px"><span class="brick-header-button-title brick-action-title">Générer un devis courant</span></a><a href="" title="Lier à un devis" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 89, "rtype_id": "opportunities-object_linked_quote"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à un devis" alt="Lier à un devis" width="16px"><span class="brick-header-button-title brick-action-title">Lier à un devis</span></a></div></div><div class="brick-content "><table class="brick-table-content"><thead><tr><th data-table-primary-column="" data-key="regular_field-number"><span class="brick-table-sortable" title="Trier «Devis» par «Numéro»" data-sort-order="asc" data-sort-field="number">Numéro</span></th><th data-table-nowrap-column="" data-key="regular_field-name"><span class="brick-table-sortable brick-table-sorted" title="Trier «Devis» par «Nom»" data-sort-order="asc" data-sort-field="name">Nom</span></th><th data-table-nowrap-column=""><span title="">Devis courant ?</span></th><th data-table-action-column=""><span title="">Délier</span></th></tr></thead><tbody><tr data-row-index="0"><td data-table-primary-column="">DE2</td><td><a href="#/billing/quote/260">DE2 (aaza)</a></td><td><input class="opportunities-current-quote" onclick="creme.opportunities.setCurrentQuote(this, '/opportunities/opportunity/127/linked/quote/260/unset_current')" checked="checked" type="checkbox">Oui
+        
+        </td><td data-table-action-column=""><a href="#/creme_core/relation/delete/similar" title="Délier ce devis" class="brick-table-action action-type-delete  " data-action="delete"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "type": "opportunities-object_linked_quote", "object_id": 260}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/unlink_16-1a0a7e279fa0158f543329b3659f0cd46d7c3f05.png" class="brick-table-action-icon" title="Délier ce devis" alt="Délier ce devis" width="16px"></a></td></tr></tbody></table></div></div><div class="brick brick-table creme_core-properties-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_creme_core-properties" data-brick-deps="[&quot;creme_core.cremeproperty&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/property_16-ed9e46980fd3ed4383b0307cf43daf6b1bb996c5.png" class="brick-header-icon brick-header-menu" title="Propriétés" alt="Propriétés" width="16px"><span class="brick-title" title="Propriétés">
+    Propriétés
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/creme_core/property/add/127" title="Nouvelles propriétés" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Nouvelles propriétés" alt="Nouvelles propriétés" width="16px"><span class="brick-header-button-title brick-action-title">Nouvelles propriétés</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucune propriété pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table creme_core-relations-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_creme_core-relations" data-brick-deps="[&quot;creme_core.relation&quot;, &quot;creme_core.relation.email-object_mail_received&quot;, &quot;creme_core.relation.opportunities-object_linked_contact&quot;, &quot;creme_core.relation.persons-subject_employed_by&quot;, &quot;creme_core.relation.opportunities-object_linked_service&quot;, &quot;creme_core.relation.email-object_mail_sended&quot;, &quot;creme_core.relation.commercial-subject_complete_goal&quot;, &quot;creme_core.relation.documents-subject_related_2_doc&quot;, &quot;creme_core.relation.email-object_related_to&quot;, &quot;creme_core.relation.opportunities-object_linked_product&quot;, &quot;creme_core.relation.opportunities-object_linked_quote&quot;]" data-brick-reloading-info="{&quot;exclude&quot;: [&quot;activities-subject_linked_2_activity&quot;, &quot;activities-subject_participates_to_activity&quot;, &quot;activities-subject_activity_subject&quot;, &quot;opportunities-subject_targets_orga&quot;], &quot;include&quot;: [&quot;email-object_mail_received&quot;, &quot;opportunities-object_linked_contact&quot;, &quot;persons-subject_employed_by&quot;, &quot;opportunities-object_linked_service&quot;, &quot;email-object_mail_sended&quot;, &quot;commercial-subject_complete_goal&quot;, &quot;documents-subject_related_2_doc&quot;, &quot;email-object_related_to&quot;, &quot;opportunities-object_linked_product&quot;, &quot;opportunities-object_linked_quote&quot;]}"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/relations_16-9fbb55d2623a6dae64cd3e1d3398180a76aaf3bc.png" class="brick-header-icon brick-header-menu" title="3 Relations" alt="3 Relations" width="16px"><span class="brick-title" title="3 Relations">
+    3 Relations
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/creme_core/relation/add/127?exclude=activities-subject_linked_2_activity&amp;exclude=activities-subject_participates_to_activity&amp;exclude=activities-subject_activity_subject&amp;exclude=opportunities-subject_targets_orga" title="Nouvelles relations" class="brick-header-button action-type-link  " data-action="link"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Nouvelles relations" alt="Nouvelles relations" width="16px"><span class="brick-header-button-title brick-action-title">Nouvelles relations</span></a></div></div><div class="brick-content "><table class="brick-table-content"><thead><tr><th data-table-primary-column="" colspan="2"><span title="">Nom</span></th><th data-table-action-column=""><span title="">Action</span></th></tr></thead><tbody><tr data-row-index="0"><td data-table-primary-column="">a comme document comptable courant</td><td><a href="#/billing/quote/260">DE2 (aaza)</a></td><td data-table-action-column=""><a href="#/creme_core/relation/delete" title="Supprimer cette relation" class="brick-table-action action-type-delete  " data-action="delete"><script type="application/json" class="brick-action-data">{"data": {"id": 236}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/unlink_16-1a0a7e279fa0158f543329b3659f0cd46d7c3f05.png" class="brick-table-action-icon" title="Supprimer cette relation" alt="Supprimer cette relation" width="16px"></a></td></tr><tr data-row-index="1"><td data-table-primary-column="">a donné lieu au devis</td><td><a href="#/billing/quote/260">DE2 (aaza)</a></td><td data-table-action-column=""><a href="#/creme_core/relation/delete" title="Supprimer cette relation" class="brick-table-action action-type-delete  " data-action="delete"><script type="application/json" class="brick-action-data">{"data": {"id": 234}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/unlink_16-1a0a7e279fa0158f543329b3659f0cd46d7c3f05.png" class="brick-table-action-icon" title="Supprimer cette relation" alt="Supprimer cette relation" width="16px"></a></td></tr><tr data-row-index="2"><td data-table-primary-column="">a été généré par</td><td><a href="#/persons/organisation/4">Société Demo</a></td><td data-table-action-column=""><a href="#/creme_core/relation/delete" title="Supprimer cette relation" class="brick-table-action action-type-delete  " data-action="delete"><script type="application/json" class="brick-action-data">{"data": {"id": 186}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/unlink_16-1a0a7e279fa0158f543329b3659f0cd46d7c3f05.png" class="brick-table-action-icon" title="Supprimer cette relation" alt="Supprimer cette relation" width="16px"></a></td></tr></tbody></table></div></div></div><div class="column east last"><div class="brick brick-table opportunities-target-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-target" data-brick-deps="[&quot;opportunities.opportunity&quot;, &quot;persons.organisation&quot;, &quot;creme_core.relation.opportunities-subject_targets_orga&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/info_16-83b6e96c68b845ad2d22b59d8bafaf3aadb9efad.png" class="brick-header-icon brick-header-menu" title="Informations" alt="Informations" width="16px"><span class="brick-title" title="Cible">
+    Cible
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"></div></div><div class="brick-content "><table class="brick-table-content"><tbody><tr data-row-index="0"><td><h1 class="opportunities-target opportunities-target-label">
+            Société réceptrice
+            </h1></td><td><h1 class="opportunities-target opportunities-target-value"><a href="#/persons/organisation/58">Société16</a></h1></td></tr></tbody></table></div></div><div class="brick brick-table opportunities-total-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_opportunities-total" data-brick-deps="[&quot;opportunities.opportunity&quot;, &quot;creme_core.relation.opportunities-object_linked_quote&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/info_16-83b6e96c68b845ad2d22b59d8bafaf3aadb9efad.png" class="brick-header-icon brick-header-menu" title="Informations" alt="Informations" width="16px"><span class="brick-title" title="Totaux">
+    Totaux
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"></div></div><div class="brick-content "><table class="brick-table-content"><thead><tr></tr></thead><tbody><tr data-row-index="0"><td><h1 class="opportunities-total-exclusive opportunities-total-exclusive-label">Total HT</h1></td><td data-type="money"><h1 class="opportunities-total-exclusive opportunities-total-exclusive-value">1 212 121,00 €</h1></td></tr><tr data-row-index="1"><td><h1 class="opportunities-total-inclusive opportunities-total-inclusive-label">Total TTC</h1></td><td data-type="money"><h1 class="opportunities-total-inclusive opportunities-total-inclusive-value">1 454 545,20 €</h1></td></tr></tbody></table></div></div><div class="brick reports-graph-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="instanceblock_reports-graph|11-" data-brick-deps="[&quot;reports.reportgraph&quot;, &quot;opportunities.opportunity&quot;]"><script type="text/javascript">
+         $('.brick[id="instanceblock_reports-graph|11-"]').on('brick-ready', function(e, brick) {
+             var properties = {
+                 charts: {
+                     
+                     barchart: 'Histogramme',
+                     
+                     piechart: 'Camembert',
+                     
+                     tubechart: 'Barres empilées 100%'
+                     
+                 },
+                 sorts: {
+                     'ASC':  "Ascendant",
+                     'DESC': "Descendant"
+                 }
+             };
+
+             var initial = {
+                 chart: '' || Object.keys(properties.charts)[0],
+                 sort:  '' || Object.keys(properties.sorts)[0]
+             };
+
+             var controller = new creme.reports.ChartController(properties);
+             controller.initialize(this, initial);
+
+             brick.on('state-update', function(e, state) {
+                 controller.reset();
+             });
+         });
+    </script><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/graph_16-3032e23baa0f3ef58cfb8bc61afef8e2aa7dba29.png" class="brick-header-icon brick-header-menu" title="Graphique — Somme CA estimé / Phase de vente" alt="Graphique — Somme CA estimé / Phase de vente" width="16px"><span class="brick-title" title="Graphique — Somme CA estimé / Phase de vente">
+    Graphique — Somme CA estimé / Phase de vente
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/reports/graph/11" title="Voir" class="brick-header-button action-type-redirect  " data-action="redirect"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="brick-header-icon" title="Voir" alt="Voir" height="16px" width="16px"><path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"></path></svg><span class="brick-header-button-title brick-action-title">Voir</span></a><a href="" title="Recharger" class="brick-header-button action-type-refresh  " data-action="refresh"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="brick-header-icon" title="Recharger" alt="Recharger" height="16px" width="16px"><path d="M9 13.5c-2.49 0-4.5-2.01-4.5-4.5S6.51 4.5 9 4.5c1.24 0 2.36.52 3.17 1.33L10 8h5V3l-1.76 1.76C12.15 3.68 10.66 3 9 3 5.69 3 3.01 5.69 3.01 9S5.69 15 9 15c2.97 0 5.43-2.16 5.9-5h-1.52c-.46 2-2.24 3.5-4.38 3.5z"></path></svg><span class="brick-header-button-title brick-action-title">Recharger</span></a></div></div><div class="brick-content "><div class="brick-graph-header clearfix"><div class="graph-controls graph-controls-type"><span class="graph-control-name">Graphique&nbsp;<span class="typography-colon">:</span></span><a class="graph-control-value" title="Sélectionner le type de visualisation du graphique">Histogramme</a></div><div class="graph-controls graph-controls-sort"><span class="graph-control-name">Tri&nbsp;<span class="typography-colon">:</span></span><a class="graph-control-value" title="Sélectionner l'ordre de tri">Ascendant</a></div><div class="graph-relation"><span class="graph-relation-name">Colonne volatile <span class="typography-colon">:</span></span><span class="graph-relation-entity">Aucune</span></div></div><div class="brick-graph-container graph_global_container_3"><div class="ui-widget-content ui-creme-widget ui-creme-plotselector widget-active widget-ready" widget="ui-creme-plotselector" plot-data-url="/reports/graph/fetch_from_instance_block/3/127?order=${sort}" plot-name="${chart}" style="width:100%;margin:0px;padding:0px;border:0px;"><script name="barchart" type="text/json">
+
+{
+    "title": {
+        "text":       "<b>Somme CA estimé / Phase de vente</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "seriesDefaults": {
+        "shadow": false,
+        "renderer": "jqplot.BarRenderer", 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "fillToZero": true,
+            "varyBarColor": true
+        }
+    },
+    "grid": {
+        "drawGridlines": true,
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "axes": {
+        "xaxis": {
+            "renderer": "jqplot.CategoryAxisRenderer",
+            "ticks": [],
+            "tickRenderer": "jqplot.AxisTickRenderer",
+            "tickOptions": {
+                "textColor":  "black",
+                "fontSize":   "9pt"
+            },
+            "pad": 1.0,
+            
+            "label": "Phase de vente - Par valeurs",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize":   "9pt",
+                "textColor":  "black"
+                
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        },
+        "yaxis": {
+            "numberTicks": "preprocess.numberTicks",
+            "numberTicksOptions": {
+                "serieIndex": 0,
+                "entryIndex": 1,
+                "maxTicksCount": 20,
+                "minTickInterval": 1,
+                "min": 0.0
+            },
+            "min": 0.0,
+            "pad": 1.0,
+            "tickRenderer": "jqplot.CanvasAxisTickRenderer",
+            "tickOptions": {
+                "formatString": "%d",
+                "textColor":  "black",
+                "fontSize":   "9pt"
+            },
+            
+            "label": "CA estimé - Somme",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize":   "10pt",
+                "textColor":  "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        }
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "tooltipAxes": "y",
+        "formatString": "%s",
+        "tooltipLocation": "n",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%2$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 0.0]]]
+}</script><script name="piechart" type="text/json">{
+    "title": {
+        "text":       "<b>Somme CA estimé / Phase de vente</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "seriesDefaults": {
+        "renderer": "jqplot.PieRenderer", 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "shadow": false,
+            "padding": 1,
+            "dataLabelFormatString": "<span style='color:black'>%1$.2f %%</span>",
+            "dataLabelPositionFactor": 0.70
+        }
+    },
+    "legend": {
+        "show": true,
+        "renderer": "jqplot.EnhancedLegendRenderer",
+        "rendererOptions": {
+            "numberColumns": 1,
+            "disableIEFading": false,
+            "fontSize":   "9pt"
+        },
+        "labels": "preprocess.formatSerieLabel",
+        "formatSerieLabelOptions": {
+            "format": "<span style='color:black;'><span>%0$s</span><span style='float:right;'>%3$.2f&nbsp;%%</span></span>"
+        },
+        "location": "e"
+    },
+    "grid": {
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "useAxesFormatters": false,
+        "tooltipAxes": "xy",
+        "formatString": "<center>%s</center><center>%.2f</center>",
+        "tooltipLocation": "cursor",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%2$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 100.0, ""]]],
+    "dataPreprocessors": [{
+                              "preprocessor": "percentEntry",
+                              "options": {
+                                  "valueIndex": 1,
+                                  "targetIndex": 3
+                              }
+                          }
+                         ]
+}</script><script name="tubechart" type="text/json">
+
+{
+    "title": {
+        "text":       "<b>Somme CA estimé / Phase de vente</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "stackSeries": true,
+    "seriesDefaults": {
+        "renderer": "jqplot.BarRenderer",
+        "shadow": false, 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "fillToZero": true,
+            "barDirection": "horizontal",
+            "barWidth": 100
+        }
+    },
+    "series": "preprocess.seriesLabel",
+    "seriesLabelOptions": {
+        "labelIndex": -3
+    },
+    "legend": {
+        "show": true,
+        "renderer": "jqplot.EnhancedLegendRenderer",
+        "rendererOptions": {
+            "numberRows": 1,
+            "disableIEFading": false,
+            "fontSize": "9pt"
+        },
+        "labels": "preprocess.formatEntryLabel",
+        "formatEntryLabelOptions": {
+            "format": "<span style='color:black;'>%2$s&nbsp;(%0$.2f&nbsp;%%)</span>"
+        },
+        "placement": "outsideGrid",
+        "location": "s"
+    },
+    "grid": {
+        "drawGridlines": true,
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "axes": {
+        "xaxis": {
+            "tickRenderer": "jqplot.CanvasAxisTickRenderer",
+            "tickOptions": {
+                "textColor":  "black",
+                "fontSize": "8pt",
+                "formatString": "%d%%"
+            },
+            
+            "label": "CA estimé - Somme",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize": "10pt",
+                "textColor": "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer",
+            "min": 0.0,
+            "max": 100.0,
+            "autoscale": true,
+            "tickInterval": 10.0
+        },
+        "yaxis": {
+            "renderer": "jqplot.CategoryAxisRenderer",
+            "tickOptions": {
+                "show": false
+            },
+            "ticks": [""],
+            
+            "label": "Phase de vente - Par valeurs",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize": "10pt",
+                "textColor": "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        }
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "yvalues": 4,
+        "tooltipAxes": "yx",
+        "formatString": "<center>%2$s</center><center>%4$.2f</center><center>%3$s</center>",
+        "tooltipLocation": "w",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%5$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 100.0]]],
+    "dataPreprocessors": ["tee",
+                          {
+                              "preprocessor": "fill", 
+                              "options": {
+                                  "value": 1
+                              }
+                          },
+                          {
+                              "preprocessor": "percentEntry",
+                              "options": {
+                                  "valueIndex": 2,
+                                  "targetIndex": 0
+                              }
+                          },
+                          {
+                              "preprocessor": "format", 
+                              "options": {
+                                  "format": "%0$.2f%%",
+                                  "targetIndex": 3
+                              }
+                          }
+                         ]
+}</script><div class="ui-widget-content ui-creme-widget ui-creme-jqueryplot ui-creme-resizable widget-active widget-ready" widget="ui-creme-jqueryplot" savable="false" style="height:300px;padding:5px;border:0px;" format="creme.graphael.BargraphData" status="valid"><div style="width: 884px; height: 290px; margin: 0px; border: 0px none; padding: 0px; position: relative;" id="jqplot_target_c32c41fc-4e11-8495-7921-54561d58c506" class="jqplot-target"><canvas width="884" height="290" style="position: absolute; left: 0px; top: 0px;" class="jqplot-base-canvas"></canvas><div class="jqplot-title" style="position: absolute; top: 0px; left: 0px; width: 884px; font-size: 13pt; text-align: center; color: rgb(0, 0, 0);"><b>Somme CA estimé / Phase de vente</b></div><div class="jqplot-axis jqplot-xaxis" style="position: absolute; width: 884px; height: 40px; left: 0px; bottom: 0px;"><canvas width="157" height="13" style="position: absolute; left: 400.5px; bottom: 0px;" class="jqplot-xaxis-label"></canvas><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 84px; width: 131.667px; white-space: normal; text-align: center;">À venir</div><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 215.667px; width: 131.667px; white-space: normal; text-align: center;">En cours</div><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 347.333px; width: 131.667px; white-space: normal; text-align: center;">En négociation</div><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 479px; width: 131.667px; white-space: normal; text-align: center;">Abandonnée</div><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 610.667px; width: 131.667px; white-space: normal; text-align: center;">Gagnée</div><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 742.333px; width: 131.667px; white-space: normal; text-align: center;">Perdue</div></div><div class="jqplot-axis jqplot-yaxis" style="position: absolute; height: 290px; width: 74px; left: 0px; top: 0px;"><canvas width="15" height="119" style="position: absolute; top: 77.5px; left: 0px;" class="jqplot-yaxis-label"></canvas><canvas width="7" height="13" style="text-align: left; position: absolute; top: 233.5px;" class="jqplot-yaxis-tick"></canvas><canvas width="42" height="13" style="text-align: left; position: absolute; top: 182px;" class="jqplot-yaxis-tick"></canvas><canvas width="49" height="13" style="text-align: left; position: absolute; top: 130.5px;" class="jqplot-yaxis-tick"></canvas><canvas width="49" height="13" style="text-align: left; position: absolute; top: 79px;" class="jqplot-yaxis-tick"></canvas><canvas width="49" height="13" style="text-align: left; position: absolute; top: 27.5px;" class="jqplot-yaxis-tick"></canvas></div><canvas width="884" height="290" class="jqplot-grid-canvas" style="position: absolute; left: 0px; top: 0px;"></canvas><canvas width="790" height="206" style="position: absolute; left: 84px; top: 34px;" class="jqplot-series-shadowCanvas"></canvas><canvas width="790" height="206" style="position: absolute; left: 84px; top: 34px;" class="jqplot-series-canvas"></canvas><canvas width="790" height="206" style="position: absolute; left: 84px; top: 34px;" class="jqplot-highlight-canvas"></canvas><div class="jqplot-highlighter-tooltip" style="position: absolute; display: none;"></div><div class="jqplot-cursor-tooltip" style="position: absolute; display: none;"></div><canvas width="790" height="206" style="position: absolute; left: 84px; top: 34px;" class="jqplot-barRenderer-highlight-canvas"></canvas><canvas width="790" height="206" style="position: absolute; left: 84px; top: 34px;" class="jqplot-event-canvas"></canvas><div class="jqplot-actions"></div></div></div></div></div></div></div><div class="brick reports-graph-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="instanceblock_reports-graph|12-" data-brick-deps="[&quot;reports.reportgraph&quot;, &quot;opportunities.opportunity&quot;]"><script type="text/javascript">
+         $('.brick[id="instanceblock_reports-graph|12-"]').on('brick-ready', function(e, brick) {
+             var properties = {
+                 charts: {
+                     
+                     barchart: 'Histogramme',
+                     
+                     piechart: 'Camembert',
+                     
+                     tubechart: 'Barres empilées 100%'
+                     
+                 },
+                 sorts: {
+                     'ASC':  "Ascendant",
+                     'DESC': "Descendant"
+                 }
+             };
+
+             var initial = {
+                 chart: '' || Object.keys(properties.charts)[0],
+                 sort:  '' || Object.keys(properties.sorts)[0]
+             };
+
+             var controller = new creme.reports.ChartController(properties);
+             controller.initialize(this, initial);
+
+             brick.on('state-update', function(e, state) {
+                 controller.reset();
+             });
+         });
+    </script><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/graph_16-3032e23baa0f3ef58cfb8bc61afef8e2aa7dba29.png" class="brick-header-icon brick-header-menu" title="Graphique — Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)" alt="Graphique — Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)" width="16px"><span class="brick-title" title="Graphique — Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)">
+    Graphique — Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/reports/graph/12" title="Voir" class="brick-header-button action-type-redirect  " data-action="redirect"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="brick-header-icon" title="Voir" alt="Voir" height="16px" width="16px"><path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"></path></svg><span class="brick-header-button-title brick-action-title">Voir</span></a><a href="" title="Recharger" class="brick-header-button action-type-refresh  " data-action="refresh"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="brick-header-icon" title="Recharger" alt="Recharger" height="16px" width="16px"><path d="M9 13.5c-2.49 0-4.5-2.01-4.5-4.5S6.51 4.5 9 4.5c1.24 0 2.36.52 3.17 1.33L10 8h5V3l-1.76 1.76C12.15 3.68 10.66 3 9 3 5.69 3 3.01 5.69 3.01 9S5.69 15 9 15c2.97 0 5.43-2.16 5.9-5h-1.52c-.46 2-2.24 3.5-4.38 3.5z"></path></svg><span class="brick-header-button-title brick-action-title">Recharger</span></a></div></div><div class="brick-content "><div class="brick-graph-header clearfix"><div class="graph-controls graph-controls-type"><span class="graph-control-name">Graphique&nbsp;<span class="typography-colon">:</span></span><a class="graph-control-value" title="Sélectionner le type de visualisation du graphique">Histogramme</a></div><div class="graph-controls graph-controls-sort"><span class="graph-control-name">Tri&nbsp;<span class="typography-colon">:</span></span><a class="graph-control-value" title="Sélectionner l'ordre de tri">Ascendant</a></div><div class="graph-relation"><span class="graph-relation-name">Colonne volatile <span class="typography-colon">:</span></span><span class="graph-relation-entity">Aucune</span></div></div><div class="brick-graph-container graph_global_container_4"><div class="ui-widget-content ui-creme-widget ui-creme-plotselector widget-active widget-ready" widget="ui-creme-plotselector" plot-data-url="/reports/graph/fetch_from_instance_block/4/127?order=${sort}" plot-name="${chart}" style="width:100%;margin:0px;padding:0px;border:0px;"><script name="barchart" type="text/json">
+
+{
+    "title": {
+        "text":       "<b>Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "seriesDefaults": {
+        "shadow": false,
+        "renderer": "jqplot.BarRenderer", 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "fillToZero": true,
+            "varyBarColor": true
+        }
+    },
+    "grid": {
+        "drawGridlines": true,
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "axes": {
+        "xaxis": {
+            "renderer": "jqplot.CategoryAxisRenderer",
+            "ticks": [],
+            "tickRenderer": "jqplot.AxisTickRenderer",
+            "tickOptions": {
+                "textColor":  "black",
+                "fontSize":   "9pt"
+            },
+            "pad": 1.0,
+            
+            "label": "Date de signature réelle - Par X jours (90)",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize":   "9pt",
+                "textColor":  "black"
+                
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        },
+        "yaxis": {
+            "numberTicks": "preprocess.numberTicks",
+            "numberTicksOptions": {
+                "serieIndex": 0,
+                "entryIndex": 1,
+                "maxTicksCount": 20,
+                "minTickInterval": 1,
+                "min": 0.0
+            },
+            "min": 0.0,
+            "pad": 1.0,
+            "tickRenderer": "jqplot.CanvasAxisTickRenderer",
+            "tickOptions": {
+                "formatString": "%d",
+                "textColor":  "black",
+                "fontSize":   "9pt"
+            },
+            
+            "label": "CA estimé - Somme",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize":   "10pt",
+                "textColor":  "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        }
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "tooltipAxes": "y",
+        "formatString": "%s",
+        "tooltipLocation": "n",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%2$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 0.0]]]
+}</script><script name="piechart" type="text/json">{
+    "title": {
+        "text":       "<b>Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "seriesDefaults": {
+        "renderer": "jqplot.PieRenderer", 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "shadow": false,
+            "padding": 1,
+            "dataLabelFormatString": "<span style='color:black'>%1$.2f %%</span>",
+            "dataLabelPositionFactor": 0.70
+        }
+    },
+    "legend": {
+        "show": true,
+        "renderer": "jqplot.EnhancedLegendRenderer",
+        "rendererOptions": {
+            "numberColumns": 1,
+            "disableIEFading": false,
+            "fontSize":   "9pt"
+        },
+        "labels": "preprocess.formatSerieLabel",
+        "formatSerieLabelOptions": {
+            "format": "<span style='color:black;'><span>%0$s</span><span style='float:right;'>%3$.2f&nbsp;%%</span></span>"
+        },
+        "location": "e"
+    },
+    "grid": {
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "useAxesFormatters": false,
+        "tooltipAxes": "xy",
+        "formatString": "<center>%s</center><center>%.2f</center>",
+        "tooltipLocation": "cursor",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%2$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 100.0, ""]]],
+    "dataPreprocessors": [{
+                              "preprocessor": "percentEntry",
+                              "options": {
+                                  "valueIndex": 1,
+                                  "targetIndex": 3
+                              }
+                          }
+                         ]
+}</script><script name="tubechart" type="text/json">
+
+{
+    "title": {
+        "text":       "<b>Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)</b>",
+        "textColor":  "black",
+        "fontSize":   "13pt",
+        "renderer":   "jqplot.DivTitleRenderer"
+    },
+    "stackSeries": true,
+    "seriesDefaults": {
+        "renderer": "jqplot.BarRenderer",
+        "shadow": false, 
+        "rendererOptions": {
+            "showDataLabels": true,
+            "fillToZero": true,
+            "barDirection": "horizontal",
+            "barWidth": 100
+        }
+    },
+    "series": "preprocess.seriesLabel",
+    "seriesLabelOptions": {
+        "labelIndex": -3
+    },
+    "legend": {
+        "show": true,
+        "renderer": "jqplot.EnhancedLegendRenderer",
+        "rendererOptions": {
+            "numberRows": 1,
+            "disableIEFading": false,
+            "fontSize": "9pt"
+        },
+        "labels": "preprocess.formatEntryLabel",
+        "formatEntryLabelOptions": {
+            "format": "<span style='color:black;'>%2$s&nbsp;(%0$.2f&nbsp;%%)</span>"
+        },
+        "placement": "outsideGrid",
+        "location": "s"
+    },
+    "grid": {
+        "drawGridlines": true,
+        "shadow": false,
+        "background": "#ffffff",
+        "drawBorder": false
+    },
+    "axes": {
+        "xaxis": {
+            "tickRenderer": "jqplot.CanvasAxisTickRenderer",
+            "tickOptions": {
+                "textColor":  "black",
+                "fontSize": "8pt",
+                "formatString": "%d%%"
+            },
+            
+            "label": "CA estimé - Somme",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize": "10pt",
+                "textColor": "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer",
+            "min": 0.0,
+            "max": 100.0,
+            "autoscale": true,
+            "tickInterval": 10.0
+        },
+        "yaxis": {
+            "renderer": "jqplot.CategoryAxisRenderer",
+            "tickOptions": {
+                "show": false
+            },
+            "ticks": [""],
+            
+            "label": "Date de signature réelle - Par X jours (90)",
+            "labelOptions": {
+                "fontWeight": "bold",
+                "fontSize": "10pt",
+                "textColor": "black"
+            },
+            "labelRenderer": "jqplot.CanvasAxisLabelRenderer"
+        }
+    },
+    "highlighter": {
+        "show": true,
+        "showMarker": false,
+        "yvalues": 4,
+        "tooltipAxes": "yx",
+        "formatString": "<center>%2$s</center><center>%4$.2f</center><center>%3$s</center>",
+        "tooltipLocation": "w",
+        "cursorStyle": "pointer"
+    },
+    "handlers": [
+        {"action": "redirect", "event": "click", "url": "%5$s"}
+    ],
+    "dataFormat": "creme.graphael.BargraphData",
+    "dataDefaults": [[["", 100.0]]],
+    "dataPreprocessors": ["tee",
+                          {
+                              "preprocessor": "fill", 
+                              "options": {
+                                  "value": 1
+                              }
+                          },
+                          {
+                              "preprocessor": "percentEntry",
+                              "options": {
+                                  "valueIndex": 2,
+                                  "targetIndex": 0
+                              }
+                          },
+                          {
+                              "preprocessor": "format", 
+                              "options": {
+                                  "format": "%0$.2f%%",
+                                  "targetIndex": 3
+                              }
+                          }
+                         ]
+}</script><div class="ui-widget-content ui-creme-widget ui-creme-jqueryplot ui-creme-resizable widget-active widget-ready" widget="ui-creme-jqueryplot" savable="false" style="height:300px;padding:5px;border:0px;" format="creme.graphael.BargraphData" status="valid"><div style="width: 884px; height: 290px; margin: 0px; border: 0px none; padding: 0px; position: relative;" id="jqplot_target_7ab35ed7-3191-10c0-10b3-9f4880a3f30d" class="jqplot-target"><canvas width="884" height="290" style="position: absolute; left: 0px; top: 0px;" class="jqplot-base-canvas"></canvas><div class="jqplot-title" style="position: absolute; top: 0px; left: 0px; width: 884px; font-size: 13pt; text-align: center; color: rgb(0, 0, 0);"><b>Somme CA estimé / Trimestre (90 jours sur Date de signature réelle)</b></div><div class="jqplot-axis jqplot-xaxis" style="position: absolute; width: 884px; height: 40px; left: 0px; bottom: 0px;"><canvas width="226" height="13" style="position: absolute; left: 345px; bottom: 0px;" class="jqplot-xaxis-label"></canvas><div class="jqplot-xaxis-tick" style="position: absolute; font-size: 9pt; color: rgb(0, 0, 0); left: 42px; width: 832px; white-space: normal; text-align: center;">23/11/2017-20/02/2018</div></div><div class="jqplot-axis jqplot-yaxis" style="position: absolute; height: 290px; width: 32px; left: 0px; top: 0px;"><canvas width="15" height="119" style="position: absolute; top: 77.5px; left: 0px;" class="jqplot-yaxis-label"></canvas><canvas width="7" height="13" style="text-align: left; position: absolute; top: 233.5px;" class="jqplot-yaxis-tick"></canvas><canvas width="7" height="13" style="text-align: left; position: absolute; top: 27.5px;" class="jqplot-yaxis-tick"></canvas></div><canvas width="884" height="290" class="jqplot-grid-canvas" style="position: absolute; left: 0px; top: 0px;"></canvas><canvas width="832" height="206" style="position: absolute; left: 42px; top: 34px;" class="jqplot-series-shadowCanvas"></canvas><canvas width="832" height="206" style="position: absolute; left: 42px; top: 34px;" class="jqplot-series-canvas"></canvas><canvas width="832" height="206" style="position: absolute; left: 42px; top: 34px;" class="jqplot-highlight-canvas"></canvas><div class="jqplot-highlighter-tooltip" style="position: absolute; display: none;"></div><div class="jqplot-cursor-tooltip" style="position: absolute; display: none;"></div><canvas width="832" height="206" style="position: absolute; left: 42px; top: 34px;" class="jqplot-barRenderer-highlight-canvas"></canvas><canvas width="832" height="206" style="position: absolute; left: 42px; top: 34px;" class="jqplot-event-canvas"></canvas><div class="jqplot-actions"></div></div></div></div></div></div></div><div class="brick brick-table creme_core-history-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_creme_core-history" data-brick-deps="[&quot;*&quot;]" data-brick-readonly="true"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/history_16-9a294a4c29fef66fe8f12bf14da20ec3c7890eea.png" class="brick-header-icon brick-header-menu" title="Historique" alt="Historique" width="16px"><span class="brick-title" title="Historique">
+    Historique
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"></div></div><div class="brick-content "><table class="brick-table-content"><thead><tr><th data-table-primary-column="" data-key="regular_field-id"><span class="brick-table-sortable brick-table-sorted" title="Trier «Lignes d'historique» par «Date»" data-sort-order="desc" data-sort-field="id">Date</span></th><th data-key="regular_field-type" data-type="integer"><span class="brick-table-sortable" title="Trier «Lignes d'historique» par «Type»" data-sort-order="desc" data-sort-field="type">Type</span></th><th><span title="">Modifications</span></th><th><span title="">Par</span></th></tr></thead><tbody><tr data-row-index="0"><td data-table-primary-column="" data-type="date">
+            02-10-2018 15:13:41
+        </td><td>Modification</td><td data-type="list">
+
+            
+                
+                    Champ “Nom de l'opportunité” passe de “aaza” à “aide
+ à la rédaction de la documentation technique des instruments”
+                
+            
+            
+        </td><td><a href="#/persons/contact/322">romain F.</a></td></tr><tr data-row-index="1"><td data-table-primary-column="" data-type="date">
+            21-12-2017 11:31:18
+        </td><td>Relation</td><td data-type="list">
+
+            
+                
+                    Ajout de la relation: “a comme document comptable courant”
+                
+            
+            
+                
+                    &nbsp;
+                        
+                            <a href="#/billing/quote/260">DE2 (aaza)</a></td><td><a href="#/persons/contact/1">Fulbert C.</a></td></tr><tr data-row-index="2"><td data-table-primary-column="" data-type="date">
+            21-12-2017 11:31:18
+        </td><td>Relation</td><td data-type="list">
+
+            
+                
+                    Ajout de la relation: “a donné lieu au devis”
+                
+            
+            
+                
+                    &nbsp;
+                        
+                            <a href="#/billing/quote/260">DE2 (aaza)</a></td><td><a href="#/persons/contact/1">Fulbert C.</a></td></tr><tr data-row-index="3"><td data-table-primary-column="" data-type="date">
+            23-11-2017 22:14:51
+        </td><td>Modification</td><td data-type="list">
+
+            
+                
+                    Champ “CA estimé” mis à “1212121”
+                
+            
+            
+        </td><td><a href="#/persons/contact/25">Hugo f.</a></td></tr><tr data-row-index="4"><td data-table-primary-column="" data-type="date">
+            23-11-2017 22:12:32
+        </td><td>Relation</td><td data-type="list">
+
+            
+                
+                    Ajout de la relation: “cible la société/le contact”
+                
+            
+            
+                
+                    &nbsp;
+                        
+                            <a href="#/persons/organisation/58">Société16</a></td><td><a href="#/persons/contact/25">Hugo f.</a></td></tr><tr data-row-index="5"><td data-table-primary-column="" data-type="date">
+            23-11-2017 22:12:32
+        </td><td>Relation</td><td data-type="list">
+
+            
+                
+                    Ajout de la relation: “a été généré par”
+                
+            
+            
+                
+                    &nbsp;
+                        
+                            <a href="#/persons/organisation/4">Société Demo</a></td><td><a href="#/persons/contact/25">Hugo f.</a></td></tr><tr data-row-index="6"><td data-table-primary-column="" data-type="date">
+            23-11-2017 22:12:32
+        </td><td>Création</td><td data-type="list"><ul></ul></td><td><a href="#/persons/contact/25">Hugo f.</a></td></tr></tbody></table></div></div><div class="brick brick-list activities-list-brick activities-future-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_activities-future_activities" data-brick-deps="[&quot;creme_core.relation.activities-subject_linked_2_activity&quot;, &quot;creme_core.relation.activities-subject_activity_subject&quot;, &quot;creme_core.relation.activities-subject_participates_to_activity&quot;, &quot;activities.activity&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/calendar_16-3607f1755c97f53ff3d628afbc2bf4d500cc1adb.png" class="brick-header-icon brick-header-menu" title="Activités futures" alt="Activités futures" width="16px"><span class="brick-title" title="Activités futures">
+    Activités futures
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="" title="Lier à une activité" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 65, "rtype_id": "activities-subject_linked_2_activity"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à une activité" alt="Lier à une activité" width="16px"><span class="brick-header-button-title brick-action-title">Lier à une activité</span></a></div></div><div class="brick-content  is-empty"><div class="brick-list-item brick-list-empty">
+    Aucune activité future liée pour le moment
+</div></div></div><div class="brick brick-list activities-list-brick activities-past-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_activities-past_activities" data-brick-deps="[&quot;creme_core.relation.activities-subject_linked_2_activity&quot;, &quot;creme_core.relation.activities-subject_activity_subject&quot;, &quot;creme_core.relation.activities-subject_participates_to_activity&quot;, &quot;activities.activity&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/calendar_16-3607f1755c97f53ff3d628afbc2bf4d500cc1adb.png" class="brick-header-icon brick-header-menu" title="Activités passées" alt="Activités passées" width="16px"><span class="brick-title" title="Activités passées">
+    Activités passées
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="" title="Lier à une activité" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 65, "rtype_id": "activities-subject_linked_2_activity"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à une activité" alt="Lier à une activité" width="16px"><span class="brick-header-button-title brick-action-title">Lier à une activité</span></a></div></div><div class="brick-content  is-empty"><div class="brick-list-item brick-list-empty">
+    Aucune activité passée liée pour le moment
+</div></div></div><div class="brick brick-table assistants-todos-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_assistants-todos" data-brick-deps="[&quot;assistants.todo&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/todo_16-de58807964bd3fedb57d05af5f675076b5b5f56d.png" class="brick-header-icon brick-header-menu" title="Todos" alt="Todos" width="16px"><span class="brick-title" title="Todos">
+    Todos
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/assistants/todo/add/127" title="Nouveau todo" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Nouveau todo" alt="Nouveau todo" width="16px"><span class="brick-header-button-title brick-action-title">Nouveau todo</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun Todo enregistré pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table assistants-memos-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_assistants-memos" data-brick-deps="[&quot;assistants.memo&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/memo_16-56ca35466b930164759f886e45a23464289646e5.png" class="brick-header-icon brick-header-menu" title="Mémos" alt="Mémos" width="16px"><span class="brick-title" title="Mémos">
+    Mémos
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/assistants/memo/add/127" title="Nouveau mémo" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Nouveau mémo" alt="Nouveau mémo" width="16px"><span class="brick-header-button-title brick-action-title">Nouveau mémo</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun mémo enregistré pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table assistants-alerts-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_assistants-alerts" data-brick-deps="[&quot;assistants.alert&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/alert_16-46cdf91afe8fdd0b2ab4b18454be25eb1a3e2d89.png" class="brick-header-icon brick-header-menu" title="Alertes" alt="Alertes" width="16px"><span class="brick-title" title="Alertes">
+    Alertes
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/assistants/alert/add/127" title="Nouvelle alerte" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Nouvelle alerte" alt="Nouvelle alerte" width="16px"><span class="brick-header-button-title brick-action-title">Nouvelle alerte</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucune alerte enregistrée pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table assistants-messages-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_assistants-messages" data-brick-deps="[&quot;assistants.usermessage&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/message_16-bb30dc27830d44ac67dcd73d6270e6ec74205a0f.png" class="brick-header-icon brick-header-menu" title="Messages" alt="Messages" width="16px"><span class="brick-title" title="Messages">
+    Messages
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/assistants/message/add/127" title="Envoyer un nouveau message" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Envoyer un nouveau message" alt="Envoyer un nouveau message" width="16px"><span class="brick-header-button-title brick-action-title">Envoyer un nouveau message</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun message reçu pour le moment
+</th></tr></thead></table></div></div><div class="brick brick-table documents-linked-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_documents-linked_docs" data-brick-deps="[&quot;creme_core.relation.documents-subject_related_2_doc&quot;, &quot;documents.document&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/document_16-faa54b9ef5e26d33f9b94f6324c55779fc093097.png" class="brick-header-icon brick-header-menu" title="Documents liés" alt="Documents liés" width="16px"><span class="brick-title" title="Documents liés">
+    Documents liés
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/documents/document/add_related/127" title="Créer un document" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Créer un document" alt="Créer un document" width="16px"><span class="brick-header-button-title brick-action-title">Créer un document</span></a><a href="" title="Lier à un document existant" class="brick-header-button action-type-add-relationships  " data-action="add-relationships"><script type="application/json" class="brick-action-data">{"data": {"subject_id": 127, "multiple": true, "ctype_id": 52, "rtype_id": "documents-subject_related_2_doc"}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à un document existant" alt="Lier à un document existant" width="16px"><span class="brick-header-button-title brick-action-title">Lier à un document existant</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun document lié
+</th></tr></thead></table></div></div><div class="brick brick-table emails-mails-history-brick is-loading-border ui-creme-widget widget-auto  widget-active widget-ready" widget="brick" id="block_emails-mails_history" data-brick-deps="[&quot;emails.entityemail&quot;, &quot;creme_core.relation.email-object_mail_sended&quot;, &quot;creme_core.relation.email-object_mail_received&quot;, &quot;creme_core.relation.email-object_related_to&quot;]"><div class="brick-header"><div class="brick-title-container"><img src="demo_fichiers/wait-ea87c0883361a773d485428852b88e36291a63b2.gif" class="brick-header-icon brick-loading-indicator" title="Chargement…" alt="Chargement…" width="16px"><img src="demo_fichiers/email_16-970248905c18d15947cadecf9bc49c987a4277b8.png" class="brick-header-icon brick-header-menu" title="E-mails" alt="E-mails" width="16px"><span class="brick-title" title="E-mails">
+    E-mails
+    <span class="brick-loading-indicator"><span class="typography-mdash">&nbsp;—&nbsp;</span><span class="brick-loading-indicator-title">Chargement…</span></span></span></div><div class="brick-header-buttons"><a href="#/emails/mail/add/127" title="Envoyer un nouvel e-mail lié" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Envoyer un nouvel e-mail lié" alt="Envoyer un nouvel e-mail lié" width="16px"><span class="brick-header-button-title brick-action-title">Envoyer un nouvel e-mail lié</span></a><a href="#/emails/mail/add_from_template/127" title="Envoyer un e-mail (avec un patron)" class="brick-header-button action-type-add  " data-action="add"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/add_16-b5dbb300b9836861659cf51ede438093b686ea1b.png" class="brick-header-icon" title="Envoyer un e-mail (avec un patron)" alt="Envoyer un e-mail (avec un patron)" width="16px"><span class="brick-header-button-title brick-action-title">Envoyer un e-mail (avec un patron)</span></a><a href="#/creme_core/relation/add_to_entities/102?rtype=email-object_mail_sended&amp;rtype=email-object_mail_received&amp;rtype=email-object_related_to&amp;ids=127&amp;persist=ids" title="Lier à un e-mail existant" class="brick-header-button action-type-link  " data-action="link"><script type="application/json" class="brick-action-data">{"data": {}, "options": {"loading": null, "confirm": null}}</script><img src="demo_fichiers/link_16-df6c5130a463b280b7100c32becd50201c326b03.png" class="brick-header-icon" title="Lier à un e-mail existant" alt="Lier à un e-mail existant" width="16px"><span class="brick-header-button-title brick-action-title">Lier à un e-mail existant</span></a></div></div><div class="brick-content  is-empty"><table class="brick-table-content"><thead><tr><th>
+    Aucun e-mail dans l'historique pour le moment
+</th></tr></thead></table></div></div></div><div class="clear"></div><div class="south"></div>
+
+    
+
+
+            
+            
+
+            
+            
+
+            </div>
+        </div>
+    </div>
+
+    
+
+
+<div class="page-decoration">
+    <div></div>
+    <span title="Cui !">
+        <svg class="icon-hybird" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+            <path d="M16.36,8.196c0.714,0.068,1.219,0.346,1.762,0.587c1.04-1.811,1.492-4.212,1.678-6.879c0.064-0.122,0.009-0.364,0.028-0.532c0.063-0.158,0.009-0.438,0.027-0.643c0.065-0.076,0.011-0.271,0.028-0.392c0.008-0.158,0.002-0.522-0.056-0.224c-0.548,1.77-1.002,3.812-1.902,5.118c0.326-0.635,0.496-1.425,0.56-2.322c0.064-0.103,0.01-0.325,0.028-0.476c0.046-0.335,0.046-0.866,0-1.202c0-0.252,0.01-0.514-0.056-0.699c0.015,0.108-0.051,0.137-0.029,0.252c-0.391,1.612-0.688,3.319-1.398,4.614c0-0.056,0-0.112,0-0.167c0.065-0.076,0.011-0.271,0.029-0.392c0.064-0.215,0.009-0.551,0.028-0.812c-0.02-0.261,0.036-0.597-0.028-0.811c-0.002-0.438,0.015-0.892-0.057-1.259c0.001,0.065-0.049,0.082-0.027,0.167c-0.794,2.488-1.642,4.923-3.077,6.769c0.61-0.331,1.211-0.674,2.126-0.699C16.137,8.196,16.247,8.196,16.36,8.196z"></path>
+            <path d="M19.156,10.015c-0.903-0.691-1.685-1.364-3.076-1.287c-1.335,0.074-2.107,0.892-2.992,1.454c0.055,0.236,0.403,0.47,0.363,0.615c-2.134-1.083-3.509-2.923-4.222-5.425c0.013-0.089-0.052-0.1-0.029-0.195c-0.064,0.409-0.009,0.94-0.027,1.397C7.909,5.283,7.011,3.627,6.489,1.596C6.456,1.543,6.452,1.464,6.432,1.4C6.367,1.978,6.41,2.69,6.459,3.246c0.083,1.576,0.28,3.039,0.839,4.14C7.032,7.101,6.862,6.722,6.655,6.378C6.587,6.261,6.544,6.117,6.459,6.015C6.126,5.21,5.768,4.433,5.509,3.554C5.42,3.651,5.452,3.87,5.425,4.029c-0.064,0.122-0.01,0.364-0.028,0.531c-0.047,0.168-0.047,0.53,0,0.699C5.416,5.4,5.361,5.613,5.425,5.707c0.124,1.629,0.661,2.845,1.397,3.859c-0.268-0.085-0.468-0.239-0.67-0.392C6.07,9.126,6.022,9.044,5.957,8.979c-0.047-0.047-0.1-0.088-0.14-0.141c-0.012-0.024-0.025-0.05-0.056-0.056c-0.526-0.667-0.945-1.44-1.23-2.349c0.344,2.21,1.049,4.301,2.265,5.733c0.029,0.072,0.111,0.093,0.14,0.167c0.114,0.091,0.217,0.193,0.308,0.308c0.056,0.009,0.054,0.075,0.111,0.084c0.878,0.791,1.914,1.423,3.328,1.679c-0.109,0.142-0.397,0.104-0.587,0.167c-0.168,0-0.336,0-0.504,0c-0.332-0.1-0.825,0.382-1.119,0.644c-0.324,0.288-0.581,0.53-0.838,0.755c-0.576,0.502-1.094,1.095-1.65,1.51c-0.888,0.663-2.005,1.207-2.992,1.791C1.979,19.868,0.982,20.461,0,21.032c0.002,0.054,0.093-0.032,0.168,0c0.233-0.018,0.54,0.037,0.727-0.027c0.149,0,0.298,0,0.448,0c0.26-0.047,0.619,0.004,0.868-0.056c0.148,0,0.297,0,0.447,0c0.093,0,0.186,0,0.279,0c0.624,0.056,1.213,0.147,1.79,0.251c0.027,0,0.055,0,0.084,0c-0.005-0.023,0.011-0.026,0.028-0.027c0.114-0.092,0.216-0.193,0.307-0.308c0.038-0.094,0.164-0.098,0.196-0.196c1.029-0.938,2.201-1.887,3.412-2.769c0.209-0.152,0.359-0.33,0.588-0.363c0.186-0.02,0.447,0.037,0.587-0.028c1.319-0.084,2.47-0.555,3.439-1.146c0.952-0.581,1.934-1.147,2.657-1.902c0.476-0.497,0.823-1.113,1.313-1.594c0.049-0.063,0.116-0.108,0.168-0.168c0.119-0.143,0.25-0.273,0.393-0.392c0.067-0.045,0.123-0.101,0.167-0.168c0.407-0.387,0.98-0.604,1.706-0.672c0.084,0,0.168,0,0.252,0c0.039,0.063,0.195,0.012,0.279,0.028c0.62,0.006,1.057,0.194,1.454,0.419c0-0.019,0-0.037,0-0.056C21.217,11.166,19.899,10.582,19.156,10.015z"></path>
+        </svg>
+    </span>
+    <div></div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer-baseline">
+    
+        <strong><a href="https://cremecrm.com/">Crème</a></strong> est un logiciel libre, cuisiné en France depuis 2008, par <strong><a href="https://hybird.org/">Hybird</a></strong>
+        <span class="footer-baseline-version">— Version 1.8.4</span>
+    
+    </div>
+
+    <div class="footer-columns clearfix">
+        <div class="footer-column footer-column-creme">
+        
+            <div class="column-content">
+                <span class="footer-column-title">Crème</span>
+                <ul>
+                    <li><a href="#/creme_about">À propos</a></li>
+                    
+                    
+                    <li><a href="https://www.cremecrm.com/forum/">Forum</a></li>
+
+                    <li class="creme-site">— <a href="https://cremecrm.com/">cremecrm.com</a></li>
+                </ul>
+            </div>
+        
+        </div>
+        <div class="footer-column footer-column-client">
+        
+
+        
+        </div>
+        <div class="footer-column footer-column-hybird">
+        
+            <div class="column-content">
+                <span class="footer-column-title">
+                    Hybird
+                    <span title="Cui !">
+                        <svg class="icon-hybird" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+                            <path d="M16.36,8.196c0.714,0.068,1.219,0.346,1.762,0.587c1.04-1.811,1.492-4.212,1.678-6.879c0.064-0.122,0.009-0.364,0.028-0.532c0.063-0.158,0.009-0.438,0.027-0.643c0.065-0.076,0.011-0.271,0.028-0.392c0.008-0.158,0.002-0.522-0.056-0.224c-0.548,1.77-1.002,3.812-1.902,5.118c0.326-0.635,0.496-1.425,0.56-2.322c0.064-0.103,0.01-0.325,0.028-0.476c0.046-0.335,0.046-0.866,0-1.202c0-0.252,0.01-0.514-0.056-0.699c0.015,0.108-0.051,0.137-0.029,0.252c-0.391,1.612-0.688,3.319-1.398,4.614c0-0.056,0-0.112,0-0.167c0.065-0.076,0.011-0.271,0.029-0.392c0.064-0.215,0.009-0.551,0.028-0.812c-0.02-0.261,0.036-0.597-0.028-0.811c-0.002-0.438,0.015-0.892-0.057-1.259c0.001,0.065-0.049,0.082-0.027,0.167c-0.794,2.488-1.642,4.923-3.077,6.769c0.61-0.331,1.211-0.674,2.126-0.699C16.137,8.196,16.247,8.196,16.36,8.196z"></path>
+                            <path d="M19.156,10.015c-0.903-0.691-1.685-1.364-3.076-1.287c-1.335,0.074-2.107,0.892-2.992,1.454c0.055,0.236,0.403,0.47,0.363,0.615c-2.134-1.083-3.509-2.923-4.222-5.425c0.013-0.089-0.052-0.1-0.029-0.195c-0.064,0.409-0.009,0.94-0.027,1.397C7.909,5.283,7.011,3.627,6.489,1.596C6.456,1.543,6.452,1.464,6.432,1.4C6.367,1.978,6.41,2.69,6.459,3.246c0.083,1.576,0.28,3.039,0.839,4.14C7.032,7.101,6.862,6.722,6.655,6.378C6.587,6.261,6.544,6.117,6.459,6.015C6.126,5.21,5.768,4.433,5.509,3.554C5.42,3.651,5.452,3.87,5.425,4.029c-0.064,0.122-0.01,0.364-0.028,0.531c-0.047,0.168-0.047,0.53,0,0.699C5.416,5.4,5.361,5.613,5.425,5.707c0.124,1.629,0.661,2.845,1.397,3.859c-0.268-0.085-0.468-0.239-0.67-0.392C6.07,9.126,6.022,9.044,5.957,8.979c-0.047-0.047-0.1-0.088-0.14-0.141c-0.012-0.024-0.025-0.05-0.056-0.056c-0.526-0.667-0.945-1.44-1.23-2.349c0.344,2.21,1.049,4.301,2.265,5.733c0.029,0.072,0.111,0.093,0.14,0.167c0.114,0.091,0.217,0.193,0.308,0.308c0.056,0.009,0.054,0.075,0.111,0.084c0.878,0.791,1.914,1.423,3.328,1.679c-0.109,0.142-0.397,0.104-0.587,0.167c-0.168,0-0.336,0-0.504,0c-0.332-0.1-0.825,0.382-1.119,0.644c-0.324,0.288-0.581,0.53-0.838,0.755c-0.576,0.502-1.094,1.095-1.65,1.51c-0.888,0.663-2.005,1.207-2.992,1.791C1.979,19.868,0.982,20.461,0,21.032c0.002,0.054,0.093-0.032,0.168,0c0.233-0.018,0.54,0.037,0.727-0.027c0.149,0,0.298,0,0.448,0c0.26-0.047,0.619,0.004,0.868-0.056c0.148,0,0.297,0,0.447,0c0.093,0,0.186,0,0.279,0c0.624,0.056,1.213,0.147,1.79,0.251c0.027,0,0.055,0,0.084,0c-0.005-0.023,0.011-0.026,0.028-0.027c0.114-0.092,0.216-0.193,0.307-0.308c0.038-0.094,0.164-0.098,0.196-0.196c1.029-0.938,2.201-1.887,3.412-2.769c0.209-0.152,0.359-0.33,0.588-0.363c0.186-0.02,0.447,0.037,0.587-0.028c1.319-0.084,2.47-0.555,3.439-1.146c0.952-0.581,1.934-1.147,2.657-1.902c0.476-0.497,0.823-1.113,1.313-1.594c0.049-0.063,0.116-0.108,0.168-0.168c0.119-0.143,0.25-0.273,0.393-0.392c0.067-0.045,0.123-0.101,0.167-0.168c0.407-0.387,0.98-0.604,1.706-0.672c0.084,0,0.168,0,0.252,0c0.039,0.063,0.195,0.012,0.279,0.028c0.62,0.006,1.057,0.194,1.454,0.419c0-0.019,0-0.037,0-0.056C21.217,11.166,19.899,10.582,19.156,10.015z"></path>
+                        </svg>
+                    </span>
+                </span>
+                <ul>
+                    <li class="hybird-site">— <a href="https://hybird.org/">hybird.org</a></li>
+                    <li class="hybird-phone">
+                        <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+                        04 91 11 87 78
+                    </li>
+                    <li class="hybird-contact">
+                        <svg class="icon icon-email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+                        <a href="mailto:contact@hybird.org?subject=Contact%20Cr%C3%A8me%20CRM&amp;body=%0d%0aEnvoy%C3%A9%20depuis%20http://mydomain">contact@hybird.org</a>
+                    </li>
+                    <li class="hybird-address">
+                        Hôtel Technologique<br>
+                        45 rue Frédéric Joliot Curie<br>
+                        13013 MARSEILLE
+                    </li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="available-blocs highlighted-container" style='display: none'>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Actions dans les délais</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Activités futures</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Activités passées</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Alertes</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Bloc de relation: «(ticket) lié à la fiche»</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Bloc de relation: «est client de»</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Bloc de relation: «est un fournisseur de»</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Bons de commande liés à l'opportunité</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Champs personnalisés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Cible et source</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Contacts liés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Démarches commerciales</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Devis liés à l'opportunité</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Documents liés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Factures liées à l'opportunité</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Historique</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Historique de consultation</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Historique des e-mails</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Historique des e-mails des campagnes</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Informations sur l'opportunité</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Mémos</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Messages utilisateur</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Produits liés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Propriétés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Réactions hors délais</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Relations</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Responsables</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Services liés</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Somme CA estimé / Phase de vente - Aucune</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Somme CA estimé / Trimestre (90 jours sur Date de signature réelle) - Aucune</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Somme des totaux HT des factures de l'année en cours / mois - Aucune</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Somme des totaux HT des factures impayées de l'année en cours / mois - Aucune</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Todos</div></div></div>
+<div class='brick'><div class='brick-header'><div class='brick-title-container'>Total</div></div></div>
+</div>
+<style type="text/css">
+    .bloc-edit-mode-container {
+        display: flex;
+    }
+    .available-blocs {
+        flex: flex-shrink;
+    }
+    .bloc-edit-mode-selected-container {
+        flex: 1;
+    }
+    .highlighted-container {
+        border: 2px solid #dedede;
+        border-style: dashed solid;
+        min-height: 100px;
+        padding: 10px;
+    }
+    .available-blocs .brick {
+        width:auto;
+        display: block;
+    }
+    .brick-content.brick-edit-mode,
+    .brick-table-content.brick-edit-mode {
+        max-height: 0;
+        padding: 0;
+    }
+    .brick-header-button.brick-edit-mode {
+        display: none;
+    }
+</style>
+<script src="./Sortable.js"></script>
+<script type="text/javascript">
+    function exitBlocEditMode() {
+        console.log('exitBlocEditMode');
+        var north = $('.detailview .north');
+        var east = $('.detailview .east');
+        var west = $('.detailview .west');
+        var clear = $('.detailview .clear');
+        var south = $('.detailview .south');
+        var blocs = [north, east, west, south];
+        blocs.forEach(function(container) {
+            container.find('.brick-table-content').removeClass('brick-edit-mode');
+            container.find('.brick-content').removeClass('brick-edit-mode');
+            container.find('.brick-header-button').removeClass('brick-edit-mode');
+            container.removeClass('highlighted-container');
+        });
+        var detailview = $('.detailview');
+        detailview.append(north);
+        detailview.append(west);
+        detailview.append(east);
+        detailview.append(clear);
+        detailview.append(south);
+        var availableBlocs = $('.available-blocs').hide();
+        detailview.append(availableBlocs);
+        $('.bloc-edit-mode-container').remove();
+        $('#config-bloc').text('Configurer les blocs').prop("onclick", null).off("click").on('click', function() {
+            startBlocEditMode();
+        })
+    }
+    function startBlocEditMode () {
+        console.log('startBlocEditMode');
+        var north = $('.detailview .north');
+        var east = $('.detailview .east');
+        var west = $('.detailview .west');
+        var clear = $('.detailview .clear');
+        var south = $('.detailview .south');
+        var blocs = [north, east, west, south];
+        blocs.forEach(function(container) {
+            container.find('.brick-table-content').addClass('brick-edit-mode');
+            container.find('.brick-content').addClass('brick-edit-mode');
+            container.find('.brick-header-button').addClass('brick-edit-mode');
+            container.addClass('highlighted-container');
+        });
+        var availableBlocs = $('.available-blocs')
+        var detailview = $('.detailview');
+        var container = $('<div class="bloc-edit-mode-container"></div>');
+        var blocsContainer = $('<div class="bloc-edit-mode-selected-container"></div>');
+        container.append(availableBlocs);
+        availableBlocs.show()
+        container.append(blocsContainer);
+        detailview.append(container);
+        blocsContainer.append(north);
+        blocsContainer.append(west);
+        blocsContainer.append(east);
+        blocsContainer.append(clear);
+        blocsContainer.append(south);
+        var sortableOptions = {
+          group: "compass-widget"
+        }
+        var sortable = new Sortable(availableBlocs.get(0), sortableOptions);
+        blocs.forEach(function(bloc) {
+          var sortable = new Sortable(bloc.get(0), sortableOptions);
+        })
+        $('#config-bloc').text('Enregistrer la configuration des blocs').prop("onclick", null).off("click").on('click', function() {
+            exitBlocEditMode();
+        })
+    }
+</script>
+    
+    
+
+
+</body></html>
